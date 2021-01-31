@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/widget/meal_item.dart';
-
+import '../widget/meal_item.dart';
 import '../dummy_data.dart';
 
 class CategoryMealsScreen extends StatelessWidget {
-  static const routeName = "/CategoryMealsScreen";
+  static const routeName = "/category-meals";
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +22,7 @@ class CategoryMealsScreen extends StatelessWidget {
           itemBuilder: (cxt, index) {
             var meal= meals[index];
             return MealItem(
+              id:meal.id,
                 title: meal.title,
                 imageUrl: meal.imageUrl,
                 duration: meal.duration,
